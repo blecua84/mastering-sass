@@ -1,0 +1,6 @@
+@mixin base-font-family-sizing($current-font-family: $base-font-family) {
+    font-size: base-font-size-calc();
+    font-family: $current-font-family;
+    line-height: $base-line-height;
+    margin-bottom: $base-font-size * $base-line-height;
+}

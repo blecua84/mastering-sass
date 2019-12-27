@@ -1,0 +1,38 @@
+// mastering-sass/ch02/scss/style.css
+$base-font-family-sans: sans-serif;
+$base-font-family-serif: serif;
+$base-font-family-code: monospace;
+
+$base-font-size: 1rem;
+$base-line-height: 1.5;
+
+$base-font-family: $base-font-family-sans;
+
+@import "helpers/mixins";
+@import "helpers/functions";
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: serif;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body > div {
+    max-width: 38rem;
+    margin: 0 auto;
+}
+
+p {
+    @include base-font-family-sizing();
+}

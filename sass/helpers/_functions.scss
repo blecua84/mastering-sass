@@ -1,0 +1,16 @@
+@function base-font-size-calc($current-font-family: $base-font-family) {
+    @return if($current-font-family == $base-font-family-serif, $base-font-size * 1.15, $base-font-size);
+}
+
+@function base-heading-sizes-calc($heading: 2) {
+    $h4-font-size: base-font-size-calc();
+    $h1-font-size: $h4-font-size * 2;
+    $h2-font-size: $h1-font-size / 1.3333;
+    $h3-font-size: $h2-font-size / 1.2821;
+    $h5-font-size: $h4-font-size / 1.2048;
+    $h6-font-size: $h5-font-size / 1.2388;
+
+    $headings: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size, $h5-font-size, $h6-font-size);
+
+    @return nth($headings, $heading);
+}
